@@ -1,7 +1,7 @@
 import AppEssentialsCore
 import SwiftUI
 
-/// Every release, newest first, as passed in by the app.
+/// Every release in the order the app passes them, usually newest first.
 public struct ChangelogView: View {
     let releases: [Release]
 
@@ -17,12 +17,14 @@ public struct ChangelogView: View {
                 }
             } header: {
                 HStack {
-                    Text("Version \(release.version)")
+                    Text(LocalizedStringResource.module("Version \(release.version)"))
                     Spacer()
-                    Text(release.date, format: .dateTime.day().month().year())
+                    if let date = release.date {
+                        Text(date, format: .dateTime.day().month().year())
+                    }
                 }
             }
         }
-        .navigationTitle("Changelog")
+        .navigationTitle(Text(LocalizedStringResource.module("Changelog")))
     }
 }

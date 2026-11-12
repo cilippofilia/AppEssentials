@@ -33,3 +33,11 @@ struct WhatsNewTests {
         #expect(WhatsNew.releaseToShow(in: [release("1.1", major: false)], lastSeenVersion: nil) == nil)
     }
 }
+
+struct WhatsNewLocalizationTests {
+    @Test func loadsTranslationsFromPackageBundle() {
+        var resource = LocalizedStringResource.module("Continue")
+        resource.locale = Locale(identifier: "it")
+        #expect(String(localized: resource) == "Continua")
+    }
+}

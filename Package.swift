@@ -4,9 +4,10 @@ import PackageDescription
 
 let package = Package(
     name: "AppEssentials",
+    defaultLocalization: "en",
     platforms: [
-        .iOS(.v26),
-        .macOS(.v26)
+        .iOS(.v18),
+        .macOS(.v15)
     ],
     products: [
         .library(name: "AboutSection", targets: ["AboutSection"]),
@@ -14,8 +15,8 @@ let package = Package(
     ],
     targets: [
         .target(name: "AppEssentialsCore"),
-        .target(name: "AboutSection", dependencies: ["AppEssentialsCore"]),
-        .target(name: "WhatsNew", dependencies: ["AppEssentialsCore"]),
+        .target(name: "AboutSection", dependencies: ["AppEssentialsCore"], resources: [.process("Resources")]),
+        .target(name: "WhatsNew", dependencies: ["AppEssentialsCore"], resources: [.process("Resources")]),
         .testTarget(name: "WhatsNewTests", dependencies: ["WhatsNew"])
     ],
     swiftLanguageModes: [.v6]

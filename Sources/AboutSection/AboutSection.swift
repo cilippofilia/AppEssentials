@@ -1,46 +1,30 @@
 import AppEssentialsCore
 import SwiftUI
 
-/// Drop-in settings sections: changelog, feature suggestions, widget guide,
-/// rate, contact and share, with the version and build in the footer.
+/// Drop-in settings sections built from the individual rows, with the version and build in the footer.
+/// Use the rows directly to mix them with your own.
 public struct AboutSection: View {
     let info: AppInfo
+    let showsWidgetGuide: Bool
 
-    public init(info: AppInfo) {
+    public init(info: AppInfo, showsWidgetGuide: Bool = true) {
         self.info = info
+        self.showsWidgetGuide = showsWidgetGuide
     }
 
     public var body: some View {
         Section {
-            NavigationLink(value: AboutDestination.changelog) {
-                Label("Changelog", systemImage: "list.bullet.rectangle")
-            }
-            if let url = info.mailURL(subject: "Feature Suggestion") {
-                Link(destination: url) {
-                    Label("Suggest a Feature", systemImage: "lightbulb")
-                }
-            }
-            NavigationLink(value: AboutDestination.widgetGuide) {
-                Label("Add Widgets", systemImage: "square.grid.2x2")
+            ChangelogRow()
+            SuggestFeatureRow(info: info)
+            if showsWidgetGuide {
+                WidgetGuideRow()
             }
         }
 
         Section {
-            if let url = info.writeReviewURL {
-                Link(destination: url) {
-                    Label("Rate the App", systemImage: "star")
-                }
-            }
-            if let url = info.mailURL(subject: "Feedback") {
-                Link(destination: url) {
-                    Label("Contact the Developer", systemImage: "envelope")
-                }
-            }
-            if let url = info.appStoreURL {
-                ShareLink(item: url) {
-                    Label("Share \(info.name)", systemImage: "square.and.arrow.up")
-                }
-            }
+            RateRow(info: info)
+            ContactRow(info: info)
+            ShareRow(info: info)
         } footer: {
             VersionFooter(info: info)
         }

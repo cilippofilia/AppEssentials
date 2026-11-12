@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/iOS-26.0+-b96229.svg" alt="iOS 26.0+" />
-  <img src="https://img.shields.io/badge/macOS-26.0+-2980b9.svg" alt="macOS 26.0+" />
+  <img src="https://img.shields.io/badge/iOS-18.0+-b96229.svg" alt="iOS 18.0+" />
+  <img src="https://img.shields.io/badge/macOS-15.0+-2980b9.svg" alt="macOS 15.0+" />
   <img src="https://img.shields.io/badge/Swift-6.2+-8e44ad.svg" alt="Swift 6.2+" />
 </p>
 
@@ -12,10 +12,12 @@ The SwiftUI screens most apps need: an About section for settings and a What's N
 
 AppEssentials ships two libraries you can adopt separately:
 
-- **AboutSection**: drop-in `Section`s for a settings `Form` or `List`. They include a changelog, a feature-suggestion email, a guide to adding widgets, a link to rate the app, a contact email for the developer, a share link, and a footer with the app version and build.
+- **AboutSection**: settings rows for a `Form` or `List`. They include a changelog, a feature-request email, a step-by-step guide to adding widgets, a link to rate the app, a contact menu (report a bug or another enquiry), a share link, and a footer with the app version and build. Use the ready-made `AboutSection`, or place the rows yourself next to your own.
 - **WhatsNew**: a sheet that shows the top three features of your latest major release once, then stays hidden until the next major release.
 
 Both read from a single list of `Release` values that you define in your app, so the changelog and the What's New sheet can't drift apart.
+
+The package's own text is translated into English, German, Spanish, French and Italian. Text you pass in, such as feature titles, is looked up in your app's String Catalog.
 
 ## Installation
 
@@ -45,10 +47,10 @@ import AboutSection // or WhatsNew; both expose AppInfo, Release and Feature
 let info = AppInfo(appStoreID: "1234567890", developerEmail: "you@example.com")
 
 let releases: [Release] = [
-    Release(version: "2.1", date: .now, features: [
-        Feature(title: "Faster sync", detail: "Changes appear instantly.", systemImage: "bolt")
+    Release(version: "2.1", features: [
+        Feature(title: "Faster sync")
     ]),
-    Release(version: "2.0", date: .now, isMajor: true, features: [
+    Release(version: "2.0", isMajor: true, features: [
         Feature(title: "Widgets", detail: "Glance at your stats.", systemImage: "square.grid.2x2"),
         Feature(title: "Dark icons", detail: "Match your Home Screen.", systemImage: "moon"),
         Feature(title: "Search", detail: "Find anything in seconds.", systemImage: "magnifyingglass")
@@ -56,7 +58,7 @@ let releases: [Release] = [
 ]
 ```
 
-`AppInfo` reads the app's name, version and build from `Bundle.main`.
+`AppInfo` reads the app's name, version and build from `Bundle.main`. A release's `date` and a feature's `detail` and `systemImage` are optional.
 
 ### 2. Add the About section to settings
 
@@ -72,7 +74,38 @@ NavigationStack {
 }
 ```
 
-`.aboutDestinations(info:releases:)` registers the changelog and widget guide screens, so attach it to the container inside the `NavigationStack`.
+`.aboutDestinations(info:releases:)` registers the changelog and widget guide screens, so attach it to the container inside the `NavigationStack`. Pass `showsWidgetGuide: false` to `AboutSection` if your app has no widget.
+
+To mix the rows with your own, use them directly:
+
+```swift
+Section {
+    MyReadMeRow()
+    ChangelogRow()
+    WidgetGuideRow()
+    ShareRow(info: info)
+} footer: {
+    VersionFooter(info: info)
+}
+```
+
+The rows are `ChangelogRow`, `SuggestFeatureRow`, `WidgetGuideRow`, `RateRow`, `ContactRow` and `ShareRow`. `AboutRow` gives your own rows the same look.
+
+To add an intro and app-specific steps to the widget guide:
+
+```swift
+.aboutDestinations(
+    info: info,
+    releases: releases,
+    widgetGuide: WidgetGuide(
+        systemImage: "wineglass.fill",
+        intro: "Add the Cocktail of the Day widget for daily inspiration.",
+        extraSteps: [
+            WidgetGuideStep(systemImage: "slider.horizontal.3", title: "Customize it", detail: "Touch and hold the widget, then choose Edit Widget.")
+        ]
+    )
+)
+```
 
 ### 3. Show What's New after updates
 
@@ -97,7 +130,7 @@ ContentView()
 
 ## Requirements
 
-- iOS 26.0+ / macOS 26.0+
+- iOS 18.0+ / macOS 15.0+ (the What's New button uses Liquid Glass on iOS 26 and macOS 26)
 - Swift 6.2+ (Xcode 26 or later)
 
 ## Project Structure
@@ -105,7 +138,7 @@ ContentView()
 | Target | Contents |
 | --- | --- |
 | `AppEssentialsCore` | `AppInfo`, `Release`, `Feature`, `FeatureRow` |
-| `AboutSection` | `AboutSection`, `ChangelogView`, `WidgetGuideView`, `VersionFooter` |
+| `AboutSection` | `AboutSection`, the individual rows, `AboutRow`, `ChangelogView`, `WidgetGuideView`, `VersionFooter` |
 | `WhatsNew` | `WhatsNewView`, `.whatsNewSheet(releases:isEnabled:)`, and the show/hide logic in `WhatsNew` |
 
 Run the tests with `swift test`.

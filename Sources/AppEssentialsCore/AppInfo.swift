@@ -27,13 +27,13 @@ public struct AppInfo: Sendable {
     }
 
     /// A `mailto:` link to the developer with the app version appended, so bug reports carry it.
-    public func mailURL(subject: String) -> URL? {
+    public func mailURL(subject: String, body: String = "") -> URL? {
         var components = URLComponents()
         components.scheme = "mailto"
         components.path = developerEmail
         components.queryItems = [
-            URLQueryItem(name: "subject", value: "\(name) – \(subject)"),
-            URLQueryItem(name: "body", value: "\n\n—\n\(name) \(version) (\(build))")
+            URLQueryItem(name: "subject", value: "\(name): \(subject)"),
+            URLQueryItem(name: "body", value: "\(body)\n\n—\n\(name) \(version) (\(build))")
         ]
         return components.url
     }

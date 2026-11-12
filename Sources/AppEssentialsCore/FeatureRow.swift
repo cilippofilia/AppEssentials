@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Icon, title and detail for a single feature.
+/// A feature's title and optional detail, with its icon when it has one.
 public struct FeatureRow: View {
     let feature: Feature
 
@@ -9,16 +9,30 @@ public struct FeatureRow: View {
     }
 
     public var body: some View {
-        Label {
-            VStack(alignment: .leading) {
-                Text(feature.title)
-                    .bold()
-                Text(feature.detail)
+        if let systemImage = feature.systemImage {
+            Label {
+                FeatureText(feature: feature)
+            } icon: {
+                Image(systemName: systemImage)
+                    .foregroundStyle(.tint)
+            }
+        } else {
+            FeatureText(feature: feature)
+        }
+    }
+}
+
+private struct FeatureText: View {
+    let feature: Feature
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(feature.title)
+                .bold(feature.detail != nil)
+            if let detail = feature.detail {
+                Text(detail)
                     .foregroundStyle(.secondary)
             }
-        } icon: {
-            Image(systemName: feature.systemImage)
-                .foregroundStyle(.tint)
         }
     }
 }

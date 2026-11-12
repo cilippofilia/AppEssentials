@@ -1,34 +1,53 @@
 import SwiftUI
 
-/// Step-by-step instructions for adding the app's widgets.
+/// Numbered instructions for adding the app's widget, followed by any app-specific steps.
 public struct WidgetGuideView: View {
-    let appName: String
+    let guide: WidgetGuide
+    let steps: [WidgetGuideStep]
 
-    public init(appName: String) {
-        self.appName = appName
-    }
-
-    private var steps: [String] {
-        #if os(macOS)
-        [
-            "Control-click the desktop and choose Edit Widgets.",
-            "Search for \(appName).",
-            "Drag the widget you want onto the desktop."
-        ]
-        #else
-        [
-            "Touch and hold an empty area of the Home Screen until the apps jiggle.",
-            "Tap Edit, then Add Widget.",
-            "Search for \(appName).",
-            "Choose a size, then tap Add Widget."
-        ]
-        #endif
+    public init(appName: String, guide: WidgetGuide = WidgetGuide()) {
+        self.guide = guide
+        steps = WidgetGuideStep.standard(appName: appName) + guide.extraSteps
     }
 
     public var body: some View {
-        List(steps.enumerated(), id: \.offset) { index, step in
-            Label(step, systemImage: "\(index + 1).circle.fill")
+        ScrollView {
+            VStack(alignment: .leading, spacing: 24) {
+                if let intro = guide.intro {
+                    WidgetGuideHeader(systemImage: guide.systemImage, intro: intro)
+                }
+
+                ForEach(steps.indices, id: \.self) { index in
+                    WidgetGuideStepRow(number: index + 1, step: steps[index])
+                }
+            }
+            .frame(maxWidth: 700)
+            .frame(maxWidth: .infinity)
+            .padding()
         }
-        .navigationTitle("Add Widgets")
+        .navigationTitle(Text(LocalizedStringResource.module("Add a Widget")))
+        .scrollBounceBehavior(.basedOnSize)
+    }
+}
+
+private struct WidgetGuideHeader: View {
+    let systemImage: String
+    let intro: LocalizedStringResource
+
+    var body: some View {
+        VStack {
+            Image(systemName: systemImage)
+                .font(.largeTitle)
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 24)
+                .background(.tint.opacity(0.15), in: .rect(cornerRadius: 16))
+                .accessibilityHidden(true)
+
+            Text(intro)
+                .multilineTextAlignment(.center)
+                .foregroundStyle(.secondary)
+        }
     }
 }
