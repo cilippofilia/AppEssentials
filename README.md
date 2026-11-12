@@ -107,6 +107,8 @@ To add an intro and app-specific steps to the widget guide:
 )
 ```
 
+To show your own artwork, such as pictures from the app, in place of the symbol, add a trailing `widgetGuideArtwork:` view builder.
+
 ### 3. Show What's New after updates
 
 ```swift

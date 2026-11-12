@@ -1,622 +1,632 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "A button appears in the top corner of the screen while the apps are jiggling.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Während die Apps wackeln, erscheint oben in der Ecke eine Taste."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mientras las apps se mueven, aparece un botón en la esquina superior de la pantalla."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Un bouton apparaît dans le coin supérieur de l'écran pendant que les apps tremblent."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mentre le app si muovono, compare un pulsante nell'angolo in alto dello schermo."
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ %@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@ (%3$@)"
           }
         }
       }
     },
-    "Add a Widget": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Widget hinzufügen"
+    "A button appears in the top corner of the screen while the apps are jiggling." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Während die Apps wackeln, erscheint oben in der Ecke eine Taste."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Añadir un widget"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mientras las apps se mueven, aparece un botón en la esquina superior de la pantalla."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ajouter un widget"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un bouton apparaît dans le coin supérieur de l'écran pendant que les apps tremblent."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aggiungi un widget"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mentre le app si muovono, compare un pulsante nell'angolo in alto dello schermo."
           }
         }
       }
     },
-    "Changelog": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Versionsverlauf"
+    "Add a Widget" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget hinzufügen"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Historial de versiones"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir un widget"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Historique des versions"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter un widget"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cronologia versioni"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi un widget"
           }
         }
       }
     },
-    "Contact the developer": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Entwickler kontaktieren"
+    "Changelog" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versionsverlauf"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Contactar al desarrollador"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historial de versiones"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Contacter le développeur"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historique des versions"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Contatta lo sviluppatore"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cronologia versioni"
           }
         }
       }
     },
-    "Control-click the desktop and choose Edit Widgets.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Klicke bei gedrückter Ctrl-Taste auf den Schreibtisch und wähle „Widgets bearbeiten“."
+    "Contact the developer" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entwickler kontaktieren"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Haz clic en el escritorio con la tecla Control pulsada y elige Editar widgets."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contactar al desarrollador"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cliquez sur le bureau en maintenant la touche Contrôle enfoncée, puis choisissez Modifier les widgets."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contacter le développeur"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fai clic sulla scrivania tenendo premuto Ctrl e scegli Modifica widget."
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contatta lo sviluppatore"
           }
         }
       }
     },
-    "Drag it to the desktop": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Auf den Schreibtisch ziehen"
+    "Control-click the desktop and choose Edit Widgets." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klicke bei gedrückter Ctrl-Taste auf den Schreibtisch und wähle „Widgets bearbeiten“."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Arrástralo al escritorio"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haz clic en el escritorio con la tecla Control pulsada y elige Editar widgets."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Faites-le glisser sur le bureau"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cliquez sur le bureau en maintenant la touche Contrôle enfoncée, puis choisissez Modifier les widgets."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Trascinalo sulla scrivania"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fai clic sulla scrivania tenendo premuto Ctrl e scegli Modifica widget."
           }
         }
       }
     },
-    "Drag the widget you want onto the desktop.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ziehe das gewünschte Widget auf den Schreibtisch."
+    "Drag it to the desktop" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auf den Schreibtisch ziehen"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Arrastra el widget que quieras al escritorio."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrástralo al escritorio"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Faites glisser le widget de votre choix sur le bureau."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faites-le glisser sur le bureau"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Trascina il widget che vuoi sulla scrivania."
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trascinalo sulla scrivania"
           }
         }
       }
     },
-    "Open the widget gallery": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Widgetgalerie öffnen"
+    "Drag the widget you want onto the desktop." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ziehe das gewünschte Widget auf den Schreibtisch."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abre la galería de widgets"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrastra el widget que quieras al escritorio."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ouvrez la galerie de widgets"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faites glisser le widget de votre choix sur le bureau."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apri la galleria dei widget"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trascina il widget che vuoi sulla scrivania."
           }
         }
       }
     },
-    "Other Enquiry": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Andere Anfrage"
+    "Open the widget gallery" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgetgalerie öffnen"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Otra consulta"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre la galería de widgets"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Autre demande"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrez la galerie de widgets"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Altre richieste"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri la galleria dei widget"
           }
         }
       }
     },
-    "Pick a size and add it": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Größe wählen und hinzufügen"
+    "Other Enquiry" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Andere Anfrage"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Elige un tamaño y añádelo"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otra consulta"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Choisissez une taille et ajoutez-le"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autre demande"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Scegli una dimensione e aggiungilo"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altre richieste"
           }
         }
       }
     },
-    "Press and hold an empty area until the apps start to jiggle.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Halte einen leeren Bereich gedrückt, bis die Apps zu wackeln beginnen."
+    "Pick a size and add it" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Größe wählen und hinzufügen"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mantén pulsada una zona vacía hasta que las apps empiecen a moverse."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige un tamaño y añádelo"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Maintenez le doigt sur une zone vide jusqu'à ce que les apps se mettent à trembler."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez une taille et ajoutez-le"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tieni premuta un'area vuota finché le app non iniziano a muoversi."
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli una dimensione e aggiungilo"
           }
         }
       }
     },
-    "Rate the app": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "App bewerten"
+    "Press and hold an empty area until the apps start to jiggle." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Halte einen leeren Bereich gedrückt, bis die Apps zu wackeln beginnen."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Valorar la app"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mantén pulsada una zona vacía hasta que las apps empiecen a moverse."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Évaluer l'app"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maintenez le doigt sur une zone vide jusqu'à ce que les apps se mettent à trembler."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Valuta l'app"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tieni premuta un'area vuota finché le app non iniziano a muoversi."
           }
         }
       }
     },
-    "Report a bug": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fehler melden"
+    "Rate the app" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App bewerten"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reportar un error"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valorar la app"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reporter un bug"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Évaluer l'app"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Informa di un bug"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valuta l'app"
           }
         }
       }
     },
-    "Request a Feature": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Feature anfragen"
+    "Report a bug" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fehler melden"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Solicitar una función"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reportar un error"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Demander une fonctionnalité"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reporter un bug"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Richiedi una feature"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informa di un bug"
           }
         }
       }
     },
-    "Search for %@": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nach %@ suchen"
+    "Request a Feature" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feature anfragen"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Busca %@"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solicitar una función"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Recherchez %@"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demander une fonctionnalité"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cerca %@"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richiedi una feature"
           }
         }
       }
     },
-    "Select an option": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Option auswählen"
+    "Search for %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach %@ suchen"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Selecciona una opción"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Busca %@"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Choisir une option"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recherchez %@"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Seleziona un'opzione"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerca %@"
           }
         }
       }
     },
-    "Share the app": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "App teilen"
+    "Select an option" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Option auswählen"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Compartir la app"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona una opción"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Partager l'app"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisir une option"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Condividi l'app"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleziona un'opzione"
           }
         }
       }
     },
-    "Swipe between the available sizes, then tap Add Widget.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wische zwischen den verfügbaren Größen und tippe dann auf „Widget hinzufügen“."
+    "Share the app" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App teilen"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Desliza entre los tamaños disponibles y toca Añadir widget."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartir la app"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Balayez entre les tailles disponibles, puis touchez Ajouter un widget."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Partager l'app"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Scorri tra le dimensioni disponibili, poi tocca Aggiungi widget."
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Condividi l'app"
           }
         }
       }
     },
-    "Tap the Edit button, then Add Widget": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tippe auf „Bearbeiten“ und dann auf „Widget hinzufügen“"
+    "Swipe between the available sizes, then tap Add Widget." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wische zwischen den verfügbaren Größen und tippe dann auf „Widget hinzufügen“."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Toca Editar y luego Añadir widget"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desliza entre los tamaños disponibles y toca Añadir widget."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Touchez Modifier, puis Ajouter un widget"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayez entre les tailles disponibles, puis touchez Ajouter un widget."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tocca Modifica, poi Aggiungi widget"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scorri tra le dimensioni disponibili, poi tocca Aggiungi widget."
           }
         }
       }
     },
-    "Touch and hold the Home Screen": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Home-Bildschirm gedrückt halten"
+    "Tap the Edit button, then Add Widget" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tippe auf „Bearbeiten“ und dann auf „Widget hinzufügen“"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mantén pulsada la pantalla de inicio"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca Editar y luego Añadir widget"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Maintenez le doigt sur l'écran d'accueil"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touchez Modifier, puis Ajouter un widget"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tieni premuto sulla schermata Home"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca Modifica, poi Aggiungi widget"
           }
         }
       }
     },
-    "Type “%@” in the search field to find the widget.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gib „%@“ in das Suchfeld ein, um das Widget zu finden."
+    "Touch and hold the Home Screen" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home-Bildschirm gedrückt halten"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Escribe «%@» en el campo de búsqueda para encontrar el widget."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mantén pulsada la pantalla de inicio"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Saisissez « %@ » dans le champ de recherche pour trouver le widget."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maintenez le doigt sur l'écran d'accueil"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Scrivi “%@” nel campo di ricerca per trovare il widget."
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tieni premuto sulla schermata Home"
           }
         }
       }
     },
-    "Version %@": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Version %@"
+    "Type “%@” in the search field to find the widget." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gib „%@“ in das Suchfeld ein, um das Widget zu finden."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Versión %@"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escribe «%@» en el campo de búsqueda para encontrar el widget."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Version %@"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saisissez « %@ » dans le champ de recherche pour trouver le widget."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Versione %@"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scrivi “%@” nel campo di ricerca per trovare il widget."
+          }
+        }
+      }
+    },
+    "Version %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versión %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versione %@"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

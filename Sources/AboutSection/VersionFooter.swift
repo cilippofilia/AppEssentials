@@ -1,7 +1,7 @@
 import AppEssentialsCore
 import SwiftUI
 
-/// "AppName 1.2 (34)", centered under the last section.
+/// "AppName 1.2 (34)", leading-aligned under the last section.
 public struct VersionFooter: View {
     let info: AppInfo
 
@@ -11,7 +11,7 @@ public struct VersionFooter: View {
 
     public var body: some View {
         Text("\(info.name) \(info.version) (\(info.build))")
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, alignment: .leading)
             .textSelection(.enabled)
     }
 }

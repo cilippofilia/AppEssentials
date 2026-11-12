@@ -1,20 +1,31 @@
 import SwiftUI
 
 /// Numbered instructions for adding the app's widget, followed by any app-specific steps.
-public struct WidgetGuideView: View {
+public struct WidgetGuideView<Artwork: View>: View {
     let guide: WidgetGuide
     let steps: [WidgetGuideStep]
+    let artwork: Artwork
 
-    public init(appName: String, guide: WidgetGuide = WidgetGuide()) {
+    /// - Parameter artwork: Shown above the intro in place of the guide's symbol, for example
+    ///   pictures from the app. Only shown when the guide has an intro.
+    public init(appName: String, guide: WidgetGuide = WidgetGuide(), @ViewBuilder artwork: () -> Artwork) {
         self.guide = guide
         steps = WidgetGuideStep.standard(appName: appName) + guide.extraSteps
+        self.artwork = artwork()
     }
 
     public var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
                 if let intro = guide.intro {
-                    WidgetGuideHeader(systemImage: guide.systemImage, intro: intro)
+                    VStack {
+                        artwork
+                            .accessibilityHidden(true)
+
+                        Text(intro)
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(.secondary)
+                    }
                 }
 
                 ForEach(steps.indices, id: \.self) { index in
@@ -26,28 +37,18 @@ public struct WidgetGuideView: View {
             .padding()
         }
         .navigationTitle(Text(LocalizedStringResource.module("Add a Widget")))
+        #if os(iOS)
+        .navigationBarTitleDisplayMode(.inline)
+        #endif
         .scrollBounceBehavior(.basedOnSize)
     }
 }
 
-private struct WidgetGuideHeader: View {
-    let systemImage: String
-    let intro: LocalizedStringResource
-
-    var body: some View {
-        VStack {
-            Image(systemName: systemImage)
-                .font(.largeTitle)
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 24)
-                .background(.tint.opacity(0.15), in: .rect(cornerRadius: 16))
-                .accessibilityHidden(true)
-
-            Text(intro)
-                .multilineTextAlignment(.center)
-                .foregroundStyle(.secondary)
+public extension WidgetGuideView where Artwork == WidgetGuideSymbol {
+    /// Shows the guide's `systemImage` above the intro.
+    init(appName: String, guide: WidgetGuide = WidgetGuide()) {
+        self.init(appName: appName, guide: guide) {
+            WidgetGuideSymbol(systemImage: guide.systemImage)
         }
     }
 }
