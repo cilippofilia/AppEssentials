@@ -45,6 +45,9 @@ Then add `AboutSection`, `WhatsNew`, or both to your target.
 import AboutSection // or WhatsNew; both expose AppInfo, Release and Feature
 
 let info = AppInfo(appStoreID: "1234567890", developerEmail: "you@example.com")
+// Optional: send "Request a Feature" to a public board instead of email.
+// let info = AppInfo(appStoreID: "1234567890", developerEmail: "you@example.com",
+//                    featureRequestURL: URL(string: "https://example.com/feedback"))
 
 let releases: [Release] = [
     Release(version: "2.1", features: [

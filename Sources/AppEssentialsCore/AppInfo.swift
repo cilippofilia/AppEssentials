@@ -4,13 +4,16 @@ import Foundation
 public struct AppInfo: Sendable {
     public let appStoreID: String
     public let developerEmail: String
+    /// A public board where people suggest and vote on features. Without one, requests go by email.
+    public let featureRequestURL: URL?
     public let name: String
     public let version: String
     public let build: String
 
-    public init(appStoreID: String, developerEmail: String, bundle: Bundle = .main) {
+    public init(appStoreID: String, developerEmail: String, featureRequestURL: URL? = nil, bundle: Bundle = .main) {
         self.appStoreID = appStoreID
         self.developerEmail = developerEmail
+        self.featureRequestURL = featureRequestURL
         name = bundle.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
             ?? bundle.object(forInfoDictionaryKey: "CFBundleName") as? String
             ?? ""

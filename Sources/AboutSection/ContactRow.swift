@@ -6,6 +6,7 @@ public struct ContactRow: View {
     let info: AppInfo
     @Environment(\.openURL) private var openURL
     @State private var showsOptions = false
+    @State private var showsMailFallback = false
 
     public init(info: AppInfo) {
         self.info = info
@@ -38,12 +39,14 @@ public struct ContactRow: View {
                 Text(LocalizedStringResource.module("Other Enquiry"))
             }
         }
+        .mailFallbackAlert(isPresented: $showsMailFallback, email: info.developerEmail)
     }
 
     // Subjects and bodies stay in English: they are read by the developer.
     private func openMail(subject: String, body: String = "") {
-        if let url = info.mailURL(subject: subject, body: body) {
-            openURL(url)
+        guard let url = info.mailURL(subject: subject, body: body) else { return }
+        openURL(url) { accepted in
+            if !accepted { showsMailFallback = true }
         }
     }
 }
